@@ -1,0 +1,59 @@
+@media screen and (min-width: 480px) and (max-width: 900px) {
+  body {
+    padding: 2.4rem;
+  }
+
+  .calculator-container {
+    max-width: 760px;
+  }
+
+  .left-side-calculator {
+    padding: 1.8rem;
+  }
+
+  .right-side-calculator {
+    padding: 1.8rem;
+  }
+
+  .calculate-button {
+    width: 100%;
+  }
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .calculator-container {
+    flex-direction: column;
+    border-radius: 0;
+  }
+
+  .left-side-calculator {
+    padding: 1.8rem;
+  }
+
+  .right-side-calculator {
+    padding: 30px 25px;
+    border-bottom-left-radius: 0;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .calculate-button {
+    width: 100%;
+  }
+
+  #monthly-repayment {
+    font-size: 1.8rem;
+  }
+  #total-repayment-value {
+    font-size: 1.8rem;
+  }
+}

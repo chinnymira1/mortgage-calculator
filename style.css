@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    Plus Jakarta Sans,
+    sans-serif;
+  background-color: #e3f3fd;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8.4rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* .mortgage-section {
+} */
+.calculator-container {
+  flex-direction: row;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.left-side-calculator {
+  flex: 1;
+  padding: 40px;
+}
+
+.mortgage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.mortgage-header h2 {
+  font-size: 1.2rem;
+  color: #122f3f;
+}
+
+#clear-all {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  color: #6b94a8;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.label-amount {
+  margin-bottom: 2rem;
+}
+
+.label-amount > label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: #6b94a8;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.input-number {
+  display: flex;
+  align-items: center;
+  border: 1px solid #829ca8;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 45px;
+  transition: border 0.3s ease;
+}
+.input-number:hover {
+  border: 1px solid #d7da2f;
+}
+.input-number:focus-within {
+  border: 1px solid #d7da2f;
+}
+.input-number span {
+  background-color: #e3f3fd;
+  color: #133040;
+  padding: 1rem;
+  font-weight: 700;
+}
+.input-number:hover span,
+.input-number:focus-within span {
+  background-color: #d7da2f;
+  color: #122f3f;
+  transition: 0.3s ease;
+}
+.input-number input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  color: #133040;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.mortgage-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #829ca8;
+  border-radius: 5px;
+  padding: 13px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.form-group > label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: #6b94a8;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.mortgage-option input {
+  accent-color: #d7da2f;
+  cursor: pointer;
+}
+.mortgage-option label {
+  font-weight: 700;
+  color: #122f3f;
+  cursor: pointer;
+}
+.mortgage-option:hover {
+  border: 1px solid #d7da2f;
+  transition: all 0.2s;
+  background-color: #f2f3b8;
+}
+.calculate-button {
+  width: 55%;
+  padding: 0.6rem;
+  background-color: #d7da2f;
+  border: none;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #122f3f;
+  cursor: pointer;
+  align-items: center;
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.calculate-btn:hover {
+  background-color: #c5c927;
+}
+
+.right-side-calculator {
+  flex: 1;
+  background-color: #122f3f;
+  color: white;
+  padding: 2rem;
+  border-bottom-left-radius: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state {
+  text-align: center;
+}
+
+.empty-state h3,
+#calculated-results h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state p,
+#calculated-results > p {
+  color: #9abed5;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+#calculated-results p {
+  color: #9abed5;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+#calculated-results {
+  width: 100%;
+  /* display: none !important; */
+}
+
+#monthly-result {
+  background-color: #0e2430;
+  border-top: 4px solid #d8db30;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+}
+#monthly-repayment {
+  color: #d7da2f;
+  font-size: 2rem;
+  font-weight: 700;
+}
+#monthly-result p {
+  color: #9abed5;
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+#total-result p {
+  color: #9abed5;
+  font-size: 0.8rem;
+}
+#monthly-result h3 {
+  color: #d8db30;
+  font-size: 2.4rem;
+}
+#total-result {
+  margin-top: 2rem;
+}
+#total-result h4 {
+  font-size: 1.4rem;
+  margin-top: -0.2rem;
+}
+/* .error-message {
+  display: none;
+  color: #d73328;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.label-amount.has-error .input-number {
+  border: 1px solid #d73328;
+}
+
+.label-amount.has-error .input-number span {
+  background-color: #d73328;
+  color: #ffffff;
+}
+
+.label-amount.has-error .error-message,
+.form-group.has-error .error-message {
+  display: block;
+}
+
+.form-group.has-error .mortgage-option {
+  border-color: #d73328;
+} */
